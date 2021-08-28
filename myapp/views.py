@@ -3,12 +3,15 @@ from django.http import HttpResponse, HttpResponseNotFound, Http404
 
 
 # Create your views here.
+from myapp.models import Women
 
 
-def index(request,id):
-    print('------------', id, '---------------')
-    a = 'salom'
-    return HttpResponse(f'hello world {a} {id}')
+def index(request):
+    w = Women.objects.all()
+    title = 'Home page'
+    list = ['About','contacts','projects']
+    context = {'women':w,'title':title,'list':list}
+    return render(request, 'myapp/index.html',context)
 
 
 def categories(request, s):
@@ -28,5 +31,5 @@ def search(request):
 
 
 def pageNotFound(request,exception):
-    return render(request,'index.html')
+    return render(request, 'myapp/index.html')
 
