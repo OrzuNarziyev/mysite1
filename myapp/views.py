@@ -40,4 +40,4 @@ def post_detail(request):
 
 
 def pageNotFound(request, exception):
-    return render(request, 'myapp/index.html')
+    return HttpResponseNotFound('<h1> not found </h1>')
