@@ -14,4 +14,8 @@ class Women(models.Model):
     def __str__(self):
         return self.title
 
+    class Meta:
+        verbose_name = 'Women'
+        verbose_name_plural = 'Women'
+
 
