@@ -1,0 +1,11 @@
+aside{
+    width: 200px;
+    height: 100vh;
+    background-color: #95999c;
+    /*float: left;*/
+
+}
+main{
+    /*float: right;*/
+    height: 100vh;
+}
